@@ -1,4 +1,3 @@
-package com.company;
 import java.util.Arrays;
 public class StudentManagement {
     public static int pos = 0;
