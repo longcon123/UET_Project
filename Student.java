@@ -1,6 +1,5 @@
-import java.util.Scanner;
 public class Student {
-    String name, id, group, email;
+    public String name, id, group, email;
     public Student(){
         this.name = "Student";
         this.id = "000";
@@ -40,7 +39,6 @@ public class Student {
         this.email = email;
     }
     public String getInfo(){
-        return getName() + " - " + getId() + " - " + getGroup() + " - " +getEmail() ;
+        return getName() + " - " + getId() + " - " + getGroup() + " - " + getEmail();
     }
 }
-
