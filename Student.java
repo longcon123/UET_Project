@@ -13,6 +13,10 @@ public class Student {
         this.email = email;
     }
     public Student(Student s){
+        this.name = s.name;
+        this.id = s.id;
+        this.group = s.group;
+        this.email = s.email;
     }
     public String getName(){
         return name;
@@ -42,3 +46,4 @@ public class Student {
         return getName() + " - " + getId() + " - " + getGroup() + " - " + getEmail();
     }
 }
+
