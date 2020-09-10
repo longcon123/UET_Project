@@ -1,17 +1,17 @@
 import java.util.Arrays;
 public class StudentManagement {
-    public static int pos = 0;
-    public static int MAX = 100;
-    public static int n = MAX - 1;
-    public static Student[] students = new Student[MAX];
-    public static void addStudent(Student newStudent){
+    int pos = 0;
+    int MAX = 100;
+    int n = MAX - 1;
+    Student[] students = new Student[MAX];
+    public void addStudent(Student newStudent){
         for(int i = n; i > pos; i--){
             students[i] = students[i-1];
         }
         students[pos] = newStudent;
         pos++;
     }
-    public static String studentsByGroups(){
+    public String studentsByGroups(){
         String[] lop = new String[100];
         String danhsach = "";
         if(students[0] != null) {
@@ -39,7 +39,7 @@ public class StudentManagement {
         }
         return danhsach;
     }
-    public static void removeStudent(String id){
+    public void removeStudent(String id){
         int delete_pos = 0;
         for(int i = 0; i < pos; i++){
             if(students[i].getId() == id){
@@ -53,7 +53,7 @@ public class StudentManagement {
         }
         pos--;
     }
-    public static boolean sameGroup(Student s1, Student s2){
+    public boolean sameGroup(Student s1, Student s2){
         if (s1.getGroup() == s2.getGroup()){
             return true;
         }
